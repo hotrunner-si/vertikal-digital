@@ -47,7 +47,7 @@ onUnmounted(() => removeEventListener('popstate', syncLanguage))
   <main>
     <section class="hero" aria-labelledby="hero-title">
       <div class="hero-topline">
-        <p class="eyebrow">{{ t.brand }}</p>
+        <p class="eyebrow">{{ t.brand }} - {{ language === 'sl' ? 'primer spletne strani' : 'example website' }}</p>
         <div class="controls">
           <div class="language-switch"><button type="button" :class="{ active: language === 'sl' }"
               @click="selectLanguage('sl')">SL</button><span>/</span><button type="button"
@@ -110,3 +110,4 @@ onUnmounted(() => removeEventListener('popstate', syncLanguage))
     <p>© {{ new Date().getFullYear() }}</p>
   </footer>
 </template>
+
